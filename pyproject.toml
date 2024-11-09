@@ -1,0 +1,18 @@
+[project]
+name = "xxml"
+version = "0.1.0"
+description = "xxml"
+readme = "README.md"
+requires-python = ">=3.9, <4.0"
+
+[tool.nonebot]
+adapters = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" },
+    { name = "开黑啦", module_name = "nonebot.adapters.kaiheila" },
+    { name = "Console", module_name = "nonebot.adapters.console" },
+    { name = "GitHub", module_name = "nonebot.adapters.github" },
+    { name = "Discord", module_name = "nonebot.adapters.discord" }
+]
+plugins = []
+plugin_dirs = ["xxml/plugins"]
+builtin_plugins = ["echo"]
