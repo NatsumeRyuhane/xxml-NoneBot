@@ -13,6 +13,6 @@ adapters = [
     { name = "GitHub", module_name = "nonebot.adapters.github" },
     { name = "Discord", module_name = "nonebot.adapters.discord" }
 ]
-plugins = []
+plugins = ["nonebot_plugin_alconna", "nonebot_plugin_apscheduler"]
 plugin_dirs = ["xxml/plugins"]
 builtin_plugins = ["echo"]
