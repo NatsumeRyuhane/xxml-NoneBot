@@ -47,6 +47,31 @@ img_dict = {
     20: "黑曜"
 }
 
+import random
+import time
+from datetime import date
+
+# 权重相等
+weights = [1] * 21
+
+def random_index():
+    keys = list(img_dict.keys())
+    chosen_key = random.choices(keys, weights=weights, k=1)[0]
+    return chosen_key
+
+current_date = None
+index_cache = None
+
+def get_today_head():
+    global current_date, index_cache
+    today = date.today()
+
+    if current_date != today:
+        current_date = today
+        index_cache = random_index()
+
+    return index_cache
+
 def get_index():
     now = time.time()
     now += 8 * 60 * 60
