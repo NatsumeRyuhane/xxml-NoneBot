@@ -40,8 +40,11 @@ async def handle_logger(bot: Bot, event: MessageEvent, state: T_State):
 
 
     if result:
-        msg = await chat(context)
-        
+        try:
+            msg = await chat(context)
+        except:
+            msg = None
+
         if msg:
             await matcher.send(
                 message = Message([
